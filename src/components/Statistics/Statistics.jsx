@@ -5,8 +5,9 @@ import createColor from "./Colorise"
 
 
 const Statistics = ({title=' ', stats}) => {    
-    return <Section>
-        <Title>{title}</Title>
+  
+  return <Section>
+    {title === " " ? " " : <Title>{title}</Title>}
           <List>
         {stats.map(stat => (
         <Item  key={stat.id} style={{backgroundColor: createColor() }}>
